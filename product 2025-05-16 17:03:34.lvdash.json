@@ -1,0 +1,331 @@
+{
+  "datasets" : [ {
+    "name" : "temp_dataset_name",
+    "displayName" : "product",
+    "query" : "SELECT  Name, \r\n        ProductNumber AS `Product Number`, \r\n        Color, \r\n        CAST(StandardCost AS DECIMAL(10,2)) AS `Standard Cost`,\r\n        CAST(ListPrice AS DECIMAL(10,2)) AS `List Price`,\r\n        Size,\r\n        CAST(SellStartDate AS DATE) AS `Sell Start Date`\r\nFROM hive_metastore.default.product"
+  } ],
+  "pages" : [ {
+    "name" : "temp_page_name",
+    "displayName" : "New Page",
+    "layout" : [ {
+      "widget" : {
+        "name" : "temp_bar_chart_name",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "temp_dataset_name",
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "bar",
+          "encodings" : { }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 0,
+        "width" : 3,
+        "height" : 4
+      }
+    }, {
+      "widget" : {
+        "name" : "temp_text_box_name",
+        "textbox_spec" : "\n# Dashboard for product table\n\nThe dashboard you created for hive_metastore.default.product is ready!\n\nThe widget to the right of this one allows you to generate a chart based on this dataset using natural language. Click the widget to start typing a description of the chart you'd like to see. Alternatively, you can edit any selected widget using the controls in the right panel.\n\nYou can also edit, copy, or delete any widget on the canvas.\n    "
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "width" : 3,
+        "height" : 4
+      }
+    }, {
+      "widget" : {
+        "name" : "temp_table_name",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "temp_dataset_name",
+            "fields" : [ {
+              "name" : "Name",
+              "expression" : "`Name`"
+            }, {
+              "name" : "Product Number",
+              "expression" : "`Product Number`"
+            }, {
+              "name" : "Color",
+              "expression" : "`Color`"
+            }, {
+              "name" : "Size",
+              "expression" : "`Size`"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 1,
+          "widgetType" : "table",
+          "encodings" : {
+            "columns" : [ {
+              "fieldName" : "Name",
+              "booleanValues" : [ "false", "true" ],
+              "imageUrlTemplate" : "{{ @ }}",
+              "imageTitleTemplate" : "{{ @ }}",
+              "imageWidth" : "",
+              "imageHeight" : "",
+              "linkUrlTemplate" : "{{ @ }}",
+              "linkTextTemplate" : "{{ @ }}",
+              "linkTitleTemplate" : "{{ @ }}",
+              "linkOpenInNewTab" : true,
+              "type" : "string",
+              "displayAs" : "string",
+              "visible" : true,
+              "order" : 100000,
+              "title" : "Name",
+              "allowSearch" : false,
+              "alignContent" : "left",
+              "allowHTML" : false,
+              "highlightLinks" : false,
+              "useMonospaceFont" : false,
+              "preserveWhitespace" : false,
+              "displayName" : "Name"
+            }, {
+              "fieldName" : "Product Number",
+              "booleanValues" : [ "false", "true" ],
+              "imageUrlTemplate" : "{{ @ }}",
+              "imageTitleTemplate" : "{{ @ }}",
+              "imageWidth" : "",
+              "imageHeight" : "",
+              "linkUrlTemplate" : "{{ @ }}",
+              "linkTextTemplate" : "{{ @ }}",
+              "linkTitleTemplate" : "{{ @ }}",
+              "linkOpenInNewTab" : true,
+              "type" : "string",
+              "displayAs" : "string",
+              "visible" : true,
+              "order" : 100001,
+              "title" : "Product Number",
+              "allowSearch" : false,
+              "alignContent" : "left",
+              "allowHTML" : false,
+              "highlightLinks" : false,
+              "useMonospaceFont" : false,
+              "preserveWhitespace" : false,
+              "displayName" : "Product Number"
+            }, {
+              "fieldName" : "Color",
+              "booleanValues" : [ "false", "true" ],
+              "imageUrlTemplate" : "{{ @ }}",
+              "imageTitleTemplate" : "{{ @ }}",
+              "imageWidth" : "",
+              "imageHeight" : "",
+              "linkUrlTemplate" : "{{ @ }}",
+              "linkTextTemplate" : "{{ @ }}",
+              "linkTitleTemplate" : "{{ @ }}",
+              "linkOpenInNewTab" : true,
+              "type" : "string",
+              "displayAs" : "string",
+              "visible" : true,
+              "order" : 100002,
+              "title" : "Color",
+              "allowSearch" : false,
+              "alignContent" : "left",
+              "allowHTML" : false,
+              "highlightLinks" : false,
+              "useMonospaceFont" : false,
+              "preserveWhitespace" : false,
+              "displayName" : "Color"
+            }, {
+              "fieldName" : "Size",
+              "booleanValues" : [ "false", "true" ],
+              "imageUrlTemplate" : "{{ @ }}",
+              "imageTitleTemplate" : "{{ @ }}",
+              "imageWidth" : "",
+              "imageHeight" : "",
+              "linkUrlTemplate" : "{{ @ }}",
+              "linkTextTemplate" : "{{ @ }}",
+              "linkTitleTemplate" : "{{ @ }}",
+              "linkOpenInNewTab" : true,
+              "type" : "string",
+              "displayAs" : "string",
+              "visible" : true,
+              "order" : 100005,
+              "title" : "Size",
+              "allowSearch" : false,
+              "alignContent" : "left",
+              "allowHTML" : false,
+              "highlightLinks" : false,
+              "useMonospaceFont" : false,
+              "preserveWhitespace" : false,
+              "displayName" : "Size"
+            } ]
+          },
+          "invisibleColumns" : [ {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "Standard Cost",
+            "type" : "decimal",
+            "displayAs" : "number",
+            "order" : 100003,
+            "title" : "Standard Cost",
+            "allowSearch" : false,
+            "alignContent" : "right",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "List Price",
+            "type" : "decimal",
+            "displayAs" : "number",
+            "order" : 100004,
+            "title" : "List Price",
+            "allowSearch" : false,
+            "alignContent" : "right",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "dateTimeFormat" : "YYYY-MM-DD",
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "Sell Start Date",
+            "type" : "date",
+            "displayAs" : "datetime",
+            "order" : 100006,
+            "title" : "Sell Start Date",
+            "allowSearch" : false,
+            "alignContent" : "right",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          } ],
+          "allowHTMLByDefault" : false,
+          "itemsPerPage" : 25,
+          "paginationSize" : "default",
+          "condensed" : true,
+          "withRowNumber" : false
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 5,
+        "width" : 3,
+        "height" : 10
+      }
+    }, {
+      "widget" : {
+        "name" : "3ad34a45",
+        "queries" : [ {
+          "name" : "dashboards/01f0326f511f1a6ba002127d8383eeeb/datasets/01f0326f511f1f75a4c1beb3e1ff6227_Name",
+          "query" : {
+            "datasetName" : "temp_dataset_name",
+            "fields" : [ {
+              "name" : "Name",
+              "expression" : "`Name`"
+            }, {
+              "name" : "Name_associativity",
+              "expression" : "COUNT_IF(`associative_filter_predicate_group`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 2,
+          "widgetType" : "filter-single-select",
+          "encodings" : {
+            "fields" : [ {
+              "fieldName" : "Name",
+              "displayName" : "Name",
+              "queryName" : "dashboards/01f0326f511f1a6ba002127d8383eeeb/datasets/01f0326f511f1f75a4c1beb3e1ff6227_Name"
+            } ]
+          },
+          "frame" : {
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 4,
+        "width" : 3,
+        "height" : 1
+      }
+    }, {
+      "widget" : {
+        "name" : "441d018f",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "temp_dataset_name",
+            "fields" : [ {
+              "name" : "monthly(Sell Start Date)",
+              "expression" : "DATE_TRUNC(\"MONTH\", `Sell Start Date`)"
+            }, {
+              "name" : "avg(List Price)",
+              "expression" : "AVG(`List Price`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "monthly(Sell Start Date)",
+              "scale" : {
+                "type" : "temporal"
+              },
+              "displayName" : "Sell Start Date"
+            },
+            "y" : {
+              "fieldName" : "avg(List Price)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Average List Price"
+            }
+          },
+          "frame" : {
+            "title" : "Product List Price Over Time",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 6,
+        "width" : 3,
+        "height" : 6
+      }
+    } ],
+    "pageType" : "PAGE_TYPE_UNSPECIFIED"
+  } ]
+}
